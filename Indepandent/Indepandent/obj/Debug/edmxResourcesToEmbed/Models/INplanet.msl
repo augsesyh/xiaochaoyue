@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="INplanetModelStoreContainer" CdmEntityContainer="INplanetEntities1">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="INplanetModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserImg" ColumnName="UserImg" />
+          <ScalarProperty Name="UserRealName" ColumnName="UserRealName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="Usertelephone" ColumnName="Usertelephone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userinfo">
+      <EntityTypeMapping TypeName="INplanetModel.userinfo">
+        <MappingFragment StoreEntitySet="userinfo">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/show")
+   
+    <style type="text/css">
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+            float: left;
+            border: 0;
+        }
+        .my-navbar {
+            padding: 20px 0;
+            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+
+            .my-navbar a {
+                background: transparent;
+                color: #fff;
+            }
+
+                .my-navbar a:hover {
+                    color:black;
+                    background: transparent;
+                    outline: 0
+                }
+
+            .my-navbar a {
+                transition: color 0.5s ease-in-out;
+            }
+
+        .top-nav {
+            padding: 0;
+            background: #000;
+        }
+
+        .button.navbar-toggle {
+            background-color: #fbfbfb;
+        }
+
+            .button.navbar-toggle > span.icon-bar {
+                background-color: #dedede
+            }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top my-navbar" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a href="~/Views/Index/Index.cshtml"><h1>独立星球</h1></a>
+            </div>
+            <div class="collapse navbar-collapse" id="ed">
+                <ul class="nav navbar-nav">
+                    <li style="padding:5px 15px;">@Html.ActionLink("主页", "Index", "Index","",htmlAttributes: new { @class="navbar-link"})</li>
+                    <li style="padding:5px 15px;">@Html.ActionLink("商店", "Index", "Store", "", htmlAttributes: new { @class = "navbar-link" })</li>
+                    <li style="padding:5px 15px;">@Html.ActionLink("开发者", "Developer", "", htmlAttributes: new { @class = "navbar-link" })</li>
+                    <li style="padding:5px 15px;">@Html.ActionLink("论坛", "Index", "frum", "", htmlAttributes: new { @class = "navbar-link" })</li>
+                </ul>
+
+               @if (Session["name"] == null)
+               {
+                <ul class="nav navbar-nav navbar-right">
+                <li><a class="hover-effect" id="log" data-toggle="modal" data-target="#modal1">登录</a></li>
+                <li><a class="hover-effect" id="reg" data-toggle="modal" data-target="#modal">注册</a></li>
+                </ul>
+               }
+               @if (Session["name"] != null)
+               {
+                <ul class="nav navbar-nav navbar-right" id="dropmenu1">
+                    <li class="btn-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="sess">
+                            @Session["name"]
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li role="menuitem"><button class="btn btn-link">个人中心</button></li>
+                            <li role="menuitem"><></li>
+
+                        </ul>
+                    </li>
+                </ul>
+               }
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div>
+        @RenderBody()
+        <hr />
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-3 footer-left-w3">
+                    <h4>联系</h4>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
+                        <li><a href="mailto:example@mail.com"><h6>ex@mail.com</h6></a></li>
+                    </ul>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
+                        <li><h6>+15279985013</h6></li>
+                    </ul>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
+                        <li><h6>江西师范大学 六栋</h6></li>
+                    </ul>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
+                        <li><h6>(0033)6544 5453 644</h6></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 footer-middle-w3">
+                    <h4>最新游戏</h4>
+                    <div class="col-md-3 img-w3-agile">
+                        <a href="single.html"><img src="~/img/ng1.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile">
+                        <a href="single.html"><img src="~/img/ng2.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile">
+                        <a href="single.html"><img src="~/img/ng3.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile">
+                        <a href="single.html"><img src="~/img/ng4.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile ">
+                        <a href="single.html"><img src="~/img/ng5.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile ">
+                        <a href="single.html"><img src="~/img/ng6.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile">
+                        <a href="single.html"><img src="~/img/ng7.jpg" alt=" " /></a>
+                    </div>
+                    <div class="col-md-3 img-w3-agile ">
+                        <a href="single.html"><img src="~/img/ng8.jpg" alt=" " /></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 footer-right-w3">
+                    <a href="index.html"><h4>独立星球</h4></a>
+                   <a href="#">管理员登陆</a>
+                </div>
+                <div class="clearfix"></div>
+                
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+    @Scripts.Render("~/bundles/bootstrap")
+   
+    @RenderSection("scripts", required: false)
+</body>
+</html>

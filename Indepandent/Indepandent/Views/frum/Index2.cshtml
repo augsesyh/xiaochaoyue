@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Indepandent.Models.Block>
+
+<div class="container">
+    <div class="row">
+        @foreach (var it in Model)
+        {
+            <div class="col-md-4 game-base">
+                <a href="#"><h4 style="text-align:left;">@it.Blockname</h4></a>
+                <hr />
+                <p>@it.Block_in</p>
+            </div>
+            <div class="col-md-2">
+            </div>
+        }
+    </div>
+</div>
+
