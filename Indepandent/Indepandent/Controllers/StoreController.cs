@@ -21,9 +21,13 @@ namespace Indepandent.Controllers
             }
         }
 
+ 
         public ActionResult detail()
         {
+
             return View();
         }
+        
+        
     }
 }

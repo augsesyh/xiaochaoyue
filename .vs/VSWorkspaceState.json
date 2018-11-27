@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Indepandent",
+    "\\Indepandent\\Indepandent\\Controllers",
+    "\\Indepandent\\Indepandent\\Views",
+    "\\Indepandent\\Indepandent\\Views\\Store"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Indepandent\\Indepandent.sln",
   "PreviewInSolutionExplorer": false
 }

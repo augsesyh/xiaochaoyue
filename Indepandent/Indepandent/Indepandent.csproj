@@ -186,6 +186,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\developerController.cs" />
     <Compile Include="Controllers\frumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
@@ -404,6 +405,7 @@
     <Folder Include="Scripts\wsq\" />
     <Folder Include="Scripts\zgj\" />
     <Folder Include="videos\" />
+    <Folder Include="Views\developer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
