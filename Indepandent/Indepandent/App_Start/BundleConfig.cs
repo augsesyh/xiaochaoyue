@@ -31,8 +31,7 @@ namespace Indepandent
             bundles.Add(new StyleBundle("~/bundles/StoreStart").Include(
                        "~/Scripts/StoreStart.js"));
             bundles.Add(new StyleBundle("~/Content/syhstyle").Include(
-                       "~/Content/syhstyle.css",
-                       "~/Content/FlexSlide.css"));
+                       "~/Content/syh/Index_Index.css"));
         }
     }
 }
