@@ -34,7 +34,7 @@ namespace Indepandent.Controllers
             string code = vCode.CreateValidateCode(4);
             Session["ValidateCode"] = code;
             byte[] bytes = vCode.CreateValidateGraphic(code);
-            return File(bytes, @"image/jpeg");
+            return File(bytes, @"image/jpg");
 
         }
         [HttpPost]
