@@ -6,7 +6,8 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     ✖
                 </button>
-                <h4 class="modal-title text-center myModal-header-font" id="modallabel">
+                
+                <h4 class="modal-title text-center" id="modallabel">
                     登录
                 </h4>
             </div>
@@ -14,53 +15,55 @@
                 @using (Html.BeginForm("Login", "Index", FormMethod.Post))
                 {
                     @Html.AntiForgeryToken()
-                    <div class="form-horizontal">
-                        @Html.ValidationSummary(true)
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-3" })
-                            <div class="col-md-9">
-                                <div class="input-group">
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <div class="input-group">
                                 @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "请输入用户名" } })
                                 @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
                                 <span class="glyphicon glyphicon-user"></span>
-                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.userpassword, htmlAttributes: new { @class = "col-md-3 control-label" })
-                            <div class="col-md-9">
-                                <div class="input-group">
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.userpassword, htmlAttributes: new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            <div class="input-group">
                                 @Html.EditorFor(model => model.userpassword, new { htmlAttributes = new { @class = "form-control", placeholder = "请输入密码", type = "password" } })
                                 @Html.ValidationMessageFor(model => model.userpassword, "", new { @class = "text-danger" })
-                                    <span class="glyphicon glyphicon-lock"></span>
-                                 </div>
+                                <span class="glyphicon glyphicon-lock"></span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.valicode,htmlAttributes: new { @class = "col-md-3 control-label" })
-                            <div class="col-md-7">
-                                <div class="input-group">
-                                    @Html.EditorFor(model => model.valicode, new { htmlAttributes = new { @class = "form-control", placeholder = "请输入验证码", type = "text" } })
-                                    @Html.ValidationMessageFor(model => model.valicode, "", new { @class = "text-danger" })
-                                    <span class="fa fa-key"></span>
-                                </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.valicode, htmlAttributes: new { @class = "col-md-3 control-label" })
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.valicode, new { htmlAttributes = new { @class = "form-control", placeholder = "请输入验证码", type = "text" } })
+                                @Html.ValidationMessageFor(model => model.valicode, "", new { @class = "text-danger" })
                             </div>
-                            <img id="valiCode" style="cursor: pointer;" class="col-md-2 control-label" src="GetValidateCode" alt="验证码" />
                         </div>
-                        <p>没有账号？<button class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#modal">注册</button></p>
-                        <div class="form-group">
-                            <div class="col-md-2">
-                                
-                            </div>
-                            <div class="col-md-8">
-                                <button id="losub" class="btn btn-primary btn-lg btn-block">登录</button>
-                            </div>
-                            <div class="col-md-2">
-                            </div>
+                        
+                            <img id="valiCode1" class="col-md-3" style="cursor: pointer;" src="GetValidateCode" alt="验证码" />
+                           
+                    </div> 
+                    <p>没有账号？<button class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#modal">注册</button></p>
+                    <div class="form-group">
+                 
+                           <div class="col-md-2">
+                        </div>
+                        <div class="col-md-8">
 
+                            <button id="losub" class="btn btn-primary btn-lg btn-block">登录</button>
+                        </div>
+                        <div class="col-md-2">
                         </div>
 
                     </div>
+
+                </div>
                 }
             </div>
         </div>
