@@ -45,61 +45,61 @@
         <h3>流行游戏，应有尽有</h3>
         @Html.Action("Index2")
         @*<div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="~/img/ng1.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+                <img src="~/img/ng1.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="~/img/ng2.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+            <div class="col-md-3 new-grid-w3l view view-eighth">
+                <img src="~/img/ng2.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="~/img/ng3.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+            <div class="col-md-3 new-grid-w3l view view-eighth">
+                <img src="~/img/ng3.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="~/img/ng4.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+            <div class="col-md-3 new-grid-w3l view view-eighth">
+                <img src="~/img/ng4.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="~/img/ng5.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+            <div class="col-md-3 new-grid-agile view view-eighth">
+                <img src="~/img/ng5.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="~/img/ng6.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+            <div class="col-md-3 new-grid-agile view view-eighth">
+                <img src="~/img/ng6.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="~/img/ng7.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
+            <div class="col-md-3 new-grid-agile view view-eighth">
+                <img src="~/img/ng7.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="~/img/ng8.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>点击</h4></a>
-                <p>了解更多</p>
-            </div>
-        </div>*@
+            <div class="col-md-3 new-grid-agile view view-eighth">
+                <img src="~/img/ng8.jpg" alt=" " />
+                <div class="mask">
+                    <a href="single.html"><h4>点击</h4></a>
+                    <p>了解更多</p>
+                </div>
+            </div>*@
         <div class="clearfix"></div>
     </div>
 </div>
@@ -151,10 +151,13 @@
     @Styles.Render("~/Content/syhstyle")
     <script type="text/javascript">
         $(function () {
+            $("#valiCode1").bind("click", function () {
+                this.src = "GetValidateCode?time=" + (new Date()).getTime();
+            });
             $("#valiCode").bind("click", function () {
                 this.src = "GetValidateCode?time=" + (new Date()).getTime();
             });
-            
+
         });
 
     </script>
