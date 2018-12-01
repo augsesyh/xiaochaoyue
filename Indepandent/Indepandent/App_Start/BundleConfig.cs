@@ -32,6 +32,9 @@ namespace Indepandent
                        "~/Scripts/StoreStart.js"));
             bundles.Add(new StyleBundle("~/Content/syhstyle").Include(
                        "~/Content/syh/Index_Index.css"));
+
+            bundles.Add(new StyleBundle("~/Content/zgjstyle").Include(
+                      "~/Content/zgj/deve_login.css"));
         }
     }
 }
