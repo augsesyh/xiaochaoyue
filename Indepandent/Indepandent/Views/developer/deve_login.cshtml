@@ -7,36 +7,51 @@
 
 <div class="container  deve_login">
     <div class="row">
-           <div class="col-md-8">
-               <h1>欢迎来到独立星球开发者平台</h1>
-               <h2>你需要登录才能进行相关操作</h2>
-           </div>
-           <div class="col-md-4">
-               <p>独立星球登录</p>
-               <form action="/developer/deve_login" method="post" class="form-group">
-                   @Html.EditorFor(model => model.DeveloperName, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入你的手机号或者邮箱登录" } })
-                   @Html.ValidationMessageFor(model => model.DeveloperName, "", new { @class = "text-danger" })   <br />
+        <div class="col-md-7">
+            <div class="left_content">
+                <h1>欢迎来到独立星球开发者平台</h1><br />
+                <h3>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    你需要登录才能进行相关操作
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">独立星球登录</h3>
+            <br />
+            <form action="/developer/deve_login" method="post" class="form-group">
+                @Html.EditorFor(model => model.DeveloperName, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入你的手机号或者邮箱登录" } })
+                @Html.ValidationMessageFor(model => model.DeveloperName, "", new { @class = "text-danger" })   <br />
 
-                   @Html.EditorFor(model => model.DevelpoerPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入你的密码", @type = "password" } })
-                   @Html.ValidationMessageFor(model => model.DevelpoerPassword, "", new { @class = "text-danger" })   <br />
-                   
-                   @*<input type="checkbox">记住密码
-                     <br />
-                 <input type="submit" value="登录" class="btn btn-primary" />*@
-                  <div class="row">
-                      <div class="col-md-9">
-                          <input type="checkbox" value="">&nbsp;记住密码
-                      </div>
-                      <div class="col-md-3">
-                          <a href="#">忘记密码</a>
-                      </div>
-                  </div>          
-                   <br />                               
-                        <input type="submit" value="登录" class="btn btn-primary col-md-12" /> 
-                   <br />
+                @Html.EditorFor(model => model.DevelpoerPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入你的密码", @type = "password" } })
+                @Html.ValidationMessageFor(model => model.DevelpoerPassword, "", new { @class = "text-danger" })   <br />
 
-               </form>
-           </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <input type="checkbox" value="">&nbsp;记住密码
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="#">忘记密码</a>
+                    </div>
+                </div>
+                <br />
+                <input type="submit" value="登录" class="btn btn-primary col-md-12" />
+                <br />
+            </form>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#">忘记密码</a>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-4">
+                    没有账号？@Html.ActionLink("注册", "deve_register")
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

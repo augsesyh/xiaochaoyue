@@ -1,4 +1,18 @@
-﻿.deve_login
-{
-    margin-top:200px;
+﻿.deve_login {
+    margin-top: 150px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+.left_content{
+    margin-top:100px;
 }

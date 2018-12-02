@@ -38,7 +38,7 @@ namespace Indepandent.Controllers
         }
 
         [HttpGet]
-        public ActionResult register()
+        public ActionResult deve_register()
         {
             return View();
         }

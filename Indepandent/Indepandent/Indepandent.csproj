@@ -300,6 +300,7 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\syh\frum_Index.css" />
     <Content Include="Content\syh\Index_Index.css" />
+    <Content Include="Content\zgj\deve_Index.css" />
     <Content Include="Content\zgj\deve_login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -407,8 +408,9 @@
     <Content Include="Views\frum\Index.cshtml" />
     <Content Include="Views\frum\Index2.cshtml" />
     <Content Include="Views\Index\Index2.cshtml" />
-    <Content Include="Views\developer\deve_Index.cshtml" />
     <Content Include="Views\developer\deve_login.cshtml" />
+    <Content Include="Views\developer\deve_register.cshtml" />
+    <Content Include="Views\developer\deve_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
