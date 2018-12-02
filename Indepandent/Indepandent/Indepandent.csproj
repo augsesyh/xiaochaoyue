@@ -387,6 +387,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\show.js" />
+    <Content Include="videos\《河洛群侠传》第三部宣传视频去logo.mp4" />
+    <Content Include="videos\国产游戏《中国式家长》官方正式宣传片.mp4" />
+    <Content Include="videos\最终幻想14红莲之狂潮官方宣传视频 蓝光%281080P%29.mp4" />
+    <Content Include="videos\欢乐兄弟高清视频1.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -420,7 +424,6 @@
     <Folder Include="Scripts\syh\" />
     <Folder Include="Scripts\wsq\" />
     <Folder Include="Scripts\zgj\" />
-    <Folder Include="videos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
