@@ -23,5 +23,10 @@ namespace Indepandent.Controllers
             var da = db.Block.Where(o => o.Block_ca == "游戏").Take(6);
             return  PartialView(da);
         }
+        [HttpGet]
+        public ActionResult Block()
+        {
+            
+        }
     }
 }

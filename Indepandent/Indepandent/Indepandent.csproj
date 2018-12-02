@@ -77,6 +77,12 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -190,7 +196,9 @@
     <Compile Include="Controllers\frumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Models\IRepository\IBlockRespotory.cs" />
     <Compile Include="Models\IRepository\IGame_deRepository.cs" />
+    <Compile Include="Models\Repository\BlockRespository.cs" />
     <Compile Include="Models\Repository\Game_deRepository.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Models\Repository\UserRepository.cs" />
@@ -289,13 +297,18 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\syh\frum_Index.css" />
     <Content Include="Content\syh\Index_Index.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\back.jpg" />
     <Content Include="img\back_ground\0005018377060590_b.jpg" />
+    <Content Include="img\back_ground\back.jpg" />
+    <Content Include="img\back_ground\timg1.jpg" />
     <Content Include="img\game\banner1.jpg" />
     <Content Include="img\game\banner2.jpg" />
     <Content Include="img\material\banner3.jpg" />

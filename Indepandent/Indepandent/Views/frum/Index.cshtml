@@ -2,17 +2,17 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="game">
-    <div class="game-header">
-        <span class="glyphicon glyphicon-home"><a href="#">游戏</a></span>
+<div class="game text-danger">
+    <div class="game-header text-left">
+        <span class="glyphicon glyphicon-home"><a href="#" class="head">游戏</a></span>
     </div>
     <div class="game-body">
         @Html.Action("Index2");
     </div>
 </div>
-<div class="service">
+<div class="service text-danger">
     <div class="service-header">
-        <span class="glyphicon glyphicon-home"><a href="#">服务</a></span>
+        <span class="glyphicon glyphicon-home"><a style="color:coral;" href="#">服务</a></span>
     </div>
     <div class="service-body">
         <div class="container">
@@ -21,7 +21,7 @@
                 {
                     <div class="col-md-4 service-base">
                         <a href="#"><h4 style="text-align:left;">@it.Blockname</h4></a>
-                        <hr />
+                        <hr class="style-two" />
                         <p>@it.Block_in</p>
                     </div>
                     <div class="col-md-2">
@@ -31,4 +31,4 @@
         </div>
     </div>
 </div>
-@Styles.Render("~/Content/syhstyle")
+@Styles.Render("~/Content/syhstyle1");
