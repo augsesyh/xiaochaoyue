@@ -27,7 +27,7 @@ namespace Indepandent.Controllers
         public ActionResult deve_login(developer dinfo)
         {
             var de = db.developer.Where(a => a.DeveloperName == dinfo.DeveloperName).Where(b => b.DevelpoerPassword == dinfo.DevelpoerPassword).First();
-            if(de==null)
+            if (de == null)
             {
                 return View();
             }
@@ -37,6 +37,11 @@ namespace Indepandent.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult register()
+        {
+            return View();
+        }
 
     }
 }
