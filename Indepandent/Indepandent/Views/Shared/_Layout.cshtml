@@ -34,6 +34,7 @@
                    outline: 0
                }
 
+<<<<<<< HEAD
            .my-navbar a {
                transition: color 0.5s ease-in-out;
            }
@@ -55,6 +56,11 @@
            float: left;
            list-style: none;
        }
+=======
+         .button.navbar-toggle > span.icon-bar {
+                background-color: #dedede
+            }
+>>>>>>> f487adb3e1341f9e0fb844d0d6b96479f8fee77d
     </style>
     
 </head>
@@ -71,9 +77,9 @@
             </div>
             <div class="collapse navbar-collapse" id="ed">
                 <ul class="nav navbar-nav">
-                    <li style="padding:5px 15px;">@Html.ActionLink("主页", "Index", "Index","",htmlAttributes: new { @class="navbar-link"})</li>
+                    <li style="padding:5px 15px;">@Html.ActionLink("主页", "Index", "Index", "", htmlAttributes: new { @class = "navbar-link" })</li>
                     <li style="padding:5px 15px;">@Html.ActionLink("商店", "Index", "Store", "", htmlAttributes: new { @class = "navbar-link" })</li>
-                    <li style="padding:5px 15px;">@Html.ActionLink("开发者", "Developer", "", htmlAttributes: new { @class = "navbar-link" })</li>
+                    <li style="padding:5px 15px;">@Html.ActionLink("开发者", "deve_login", "developer","", htmlAttributes: new { @class = "navbar-link" })</li>
                     <li style="padding:5px 15px;">@Html.ActionLink("论坛", "Index", "frum", "", htmlAttributes: new { @class = "navbar-link" })</li>
                 </ul>
 

@@ -300,6 +300,7 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\syh\frum_Index.css" />
     <Content Include="Content\syh\Index_Index.css" />
+    <Content Include="Content\zgj\deve_login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -408,17 +409,18 @@
     <Content Include="Views\frum\Index.cshtml" />
     <Content Include="Views\frum\Index2.cshtml" />
     <Content Include="Views\Index\Index2.cshtml" />
+    <Content Include="Views\developer\deve_Index.cshtml" />
+    <Content Include="Views\developer\deve_login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\wsq\" />
-    <Folder Include="Content\zgj\" />
+    <Folder Include="developer_upload\" />
     <Folder Include="img\news\" />
     <Folder Include="Scripts\syh\" />
     <Folder Include="Scripts\wsq\" />
     <Folder Include="Scripts\zgj\" />
     <Folder Include="videos\" />
-    <Folder Include="Views\developer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

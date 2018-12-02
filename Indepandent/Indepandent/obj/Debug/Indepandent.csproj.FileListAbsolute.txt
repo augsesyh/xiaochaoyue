@@ -1069,7 +1069,6 @@ G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\zh-Hans\System.Web.Razor.resou
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\zh-Hans\System.Web.WebPages.resources.dll
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-G:\C#code\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csprojAssemblyReference.cache
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csproj.CoreCompileInputs.cache
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csproj.CopyComplete
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.dll
