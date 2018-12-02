@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Indepandent.Models;
-
+using Indepandent.Models.IRepository;
+using Indepandent.Models.Repository;
 namespace Indepandent.Controllers
 {
     public class frumController : Controller
@@ -24,8 +25,11 @@ namespace Indepandent.Controllers
             return  PartialView(da);
         }
         [HttpGet]
-        public ActionResult Block()
+        public ActionResult Block(int? page)
         {
+            IBlockRespotory da = new BlockRespository();
+            var dt=da.FindAll();
+
             return View();
         }
     }
