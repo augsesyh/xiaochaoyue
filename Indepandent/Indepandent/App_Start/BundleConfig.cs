@@ -1,4 +1,4 @@
-﻿using System.Web;
+using System.Web;
 using System.Web.Optimization;
 
 namespace Indepandent
@@ -37,7 +37,8 @@ namespace Indepandent
             bundles.Add(new StyleBundle("~/Content/PagedList").Include(
                         "~/Content/PagedList.css"));
             bundles.Add(new StyleBundle("~/Content/zgjstyle").Include(
-                      "~/Content/zgj/deve_login.css"));
+                    "~/Content/zgj/deve_Index.css",
+                    "~/Content/zgj/deve_login.css"));
         }
     }
 }

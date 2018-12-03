@@ -306,6 +306,7 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\syh\frum_Index.css" />
     <Content Include="Content\syh\Index_Index.css" />
+    <Content Include="Content\zgj\deve_Index.css" />
     <Content Include="Content\zgj\deve_login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -351,6 +352,13 @@
     <Content Include="img\material\王者荣耀.jpg" />
     <Content Include="img\material\绝地求生.jpg" />
     <Content Include="img\material\背景.jpg" />
+    <Content Include="img\tg1.jpg" />
+    <Content Include="img\tg2.jpg" />
+    <Content Include="img\tg3.jpg" />
+    <Content Include="img\tg4.jpg" />
+    <Content Include="img\ti3.jpg" />
+    <Content Include="img\ti4.jpg" />
+    <Content Include="img\timg.jpg" />
     <Content Include="Models\Project.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Project.edmx</DependentUpon>
@@ -392,6 +400,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\show.js" />
+    <Content Include="videos\《河洛群侠传》第三部宣传视频去logo.mp4" />
+    <Content Include="videos\国产游戏《中国式家长》官方正式宣传片.mp4" />
+    <Content Include="videos\最终幻想14红莲之狂潮官方宣传视频 蓝光%281080P%29.mp4" />
+    <Content Include="videos\欢乐兄弟高清视频1.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -416,6 +428,8 @@
     <Content Include="Views\developer\deve_Index.cshtml" />
     <Content Include="Views\developer\deve_login.cshtml" />
     <Content Include="Views\frum\Block.cshtml" />
+    <Content Include="Views\developer\_ViewStart.cshtml" />
+    <Content Include="Views\developer\deve_register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -425,7 +439,6 @@
     <Folder Include="Scripts\syh\" />
     <Folder Include="Scripts\wsq\" />
     <Folder Include="Scripts\zgj\" />
-    <Folder Include="videos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
