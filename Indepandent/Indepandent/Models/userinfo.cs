@@ -43,16 +43,16 @@ namespace Indepandent.Models
         [Display(Name = "确认密码")]
         [Compare("userpassword")]
         public string confirmpassword { get; set; }
-       
+
         public string userimg { get; set; }
         [Required(ErrorMessage = "不能为空")]
-        [Display(Name ="真实姓名")]
+        [Display(Name = "真实姓名")]
         public string userrealname { get; set; }
-        [Required(ErrorMessage ="不能为空")]
+        [Required(ErrorMessage = "不能为空")]
         [EmailAddress]
-        [Display(Name ="邮箱")]
+        [Display(Name = "邮箱")]
         public string useremail { get; set; }
-        [Required(ErrorMessage ="不能为空")]
+        [Required(ErrorMessage = "不能为空")]
         [Display(Name = "电话")]
         public string usertelephone { get; set; }
         public string usercondition { get; set; }
@@ -60,7 +60,7 @@ namespace Indepandent.Models
         [Required(ErrorMessage = "不能为空")]
         [Display(Name = "验证码")]
         public string valicode { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ban> ban { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

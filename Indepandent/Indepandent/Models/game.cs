@@ -18,6 +18,7 @@ namespace Indepandent.Models
         public game()
         {
             this.Block = new HashSet<Block>();
+            this.ca_ga = new HashSet<ca_ga>();
             this.collections = new HashSet<collections>();
             this.comment = new HashSet<comment>();
             this.download = new HashSet<download>();
@@ -29,8 +30,7 @@ namespace Indepandent.Models
     
         public int gameid { get; set; }
         public int game_developer_id { get; set; }
-        public int user_id { get; set; }
-        public int category_id { get; set; }
+        public Nullable<int> user_id { get; set; }
         public string game_name { get; set; }
         public string game_link { get; set; }
         public string game_code { get; set; }
@@ -39,7 +39,8 @@ namespace Indepandent.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Block> Block { get; set; }
-        public virtual categorys categorys { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ca_ga> ca_ga { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<collections> collections { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

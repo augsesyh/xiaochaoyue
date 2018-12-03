@@ -17,13 +17,13 @@ namespace Indepandent.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public categorys()
         {
-            this.game = new HashSet<game>();
+            this.ca_ga = new HashSet<ca_ga>();
         }
     
         public int categoryid { get; set; }
         public string category_name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<game> game { get; set; }
+        public virtual ICollection<ca_ga> ca_ga { get; set; }
     }
 }

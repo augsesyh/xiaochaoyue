@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Indepandent.Models;
 using Indepandent.Models.IRepository;
 using Indepandent.Models.Repository;
+using PagedList;
+
 namespace Indepandent.Controllers
 {
     public class frumController : Controller
@@ -28,9 +31,11 @@ namespace Indepandent.Controllers
         public ActionResult Block(int? page)
         {
             IBlockRespotory da = new BlockRespository();
-            var dt=da.FindAll();
-
-            return View();
+            var dt=da.FindAll("游戏");
+            int pageNumber = page ?? 1; 
+            int pageSize = int.Parse(ConfigurationManager.AppSettings["pageSize"]); 
+            IPagedList<Block> pagedList = dt.ToPagedList(pageNumber, pageSize);
+            return View(pagedList);
         }
     }
 }

@@ -8,6 +8,7 @@ img {
     float: left;
     border: 0;
 }
+
 .head
 {
     color:coral;
@@ -110,7 +111,14 @@ a:hover
 .game-base a, a * {
     transition: color .3s ease-out,text-shadow .3s ease-out-out;
 }
-
+.game-footer{
+    margin:0px;
+    padding:0px;
+}
+.pagination > li > a, .pagination > li > span {
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid #a94442;
+}
 hr.style-two { /*透明渐变水平线*/
     width: 90%;
     margin: 0 auto;

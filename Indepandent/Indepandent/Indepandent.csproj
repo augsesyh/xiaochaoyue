@@ -192,25 +192,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\developerController.cs" />
     <Compile Include="Controllers\frumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
-    <Compile Include="Controllers\_commentsController.cs" />
-    <Compile Include="Models\IRepository\IAdminRepository.cs" />
-    <Compile Include="Models\IRepository\IBlockRespotory.cs" />
-    <Compile Include="Models\IRepository\IGame_deRepository.cs" />
-    <Compile Include="Models\Repository\AdminRepository.cs" />
-    <Compile Include="Models\Repository\BlockRespository.cs" />
-    <Compile Include="Models\Repository\Game_deRepository.cs" />
-    <Compile Include="Controllers\StoreController.cs" />
-    <Compile Include="Models\Repository\UserRepository.cs" />
-    <Compile Include="Controllers\qwjcode\ValidateCode.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\IRepository\IUserRepository.cs" />
     <Compile Include="Models\admin.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -224,6 +209,9 @@
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\categorys.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ca_ga.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\collections.cs">
@@ -247,6 +235,8 @@
     <Compile Include="Models\game_detail.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\IRepository\IBlockRespotory.cs" />
+    <Compile Include="Models\IRepository\IGame_deRepository.cs" />
     <Compile Include="Models\new.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -277,6 +267,15 @@
     <Compile Include="Models\reply.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Repository\BlockRespository.cs" />
+    <Compile Include="Models\Repository\Game_deRepository.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Models\Repository\UserRepository.cs" />
+    <Compile Include="Controllers\qwjcode\ValidateCode.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IRepository\IUserRepository.cs" />
     <Compile Include="Models\shoppingcart.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -284,6 +283,9 @@
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\user1.cs">
@@ -350,6 +352,13 @@
     <Content Include="img\material\王者荣耀.jpg" />
     <Content Include="img\material\绝地求生.jpg" />
     <Content Include="img\material\背景.jpg" />
+    <Content Include="img\tg1.jpg" />
+    <Content Include="img\tg2.jpg" />
+    <Content Include="img\tg3.jpg" />
+    <Content Include="img\tg4.jpg" />
+    <Content Include="img\ti3.jpg" />
+    <Content Include="img\ti4.jpg" />
+    <Content Include="img\timg.jpg" />
     <Content Include="Models\Project.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Project.edmx</DependentUpon>
@@ -365,6 +374,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <EntityDeploy Include="Models\Project.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Project.Designer.cs</LastGenOutput>
@@ -372,11 +386,6 @@
     <Content Include="Models\Project.edmx.diagram">
       <DependentUpon>Project.edmx</DependentUpon>
     </Content>
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -416,9 +425,10 @@
     <Content Include="Views\frum\Index.cshtml" />
     <Content Include="Views\frum\Index2.cshtml" />
     <Content Include="Views\Index\Index2.cshtml" />
-    <Content Include="Views\developer\deve_login.cshtml" />
-    <Content Include="Views\developer\deve_register.cshtml" />
     <Content Include="Views\developer\deve_Index.cshtml" />
+    <Content Include="Views\developer\deve_login.cshtml" />
+    <Content Include="Views\frum\Block.cshtml" />
+    <Content Include="Views\developer\deve_register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -428,8 +438,6 @@
     <Folder Include="Scripts\syh\" />
     <Folder Include="Scripts\wsq\" />
     <Folder Include="Scripts\zgj\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\_comments\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
