@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>upload</title>
+</head>
+<body>
+    <form action="/developer/SavaAs" method="post" enctype="multipart/form-data">
+        <div class="upload_img">
+
+            <input type="file" id="MyFileimg" name="MyFileimg" value="选择图片文件" />
+            <input type="submit" value="上传图片" />
+        </div>
+        @*<div class="upload_video">
+            <input type="file" id="MyFilevideo" name="MyFilevideo" value="选择视频文件" />
+            <input type="submit" value="上传视屏" />
+        </div>*@
+    </form>
+</body>
+</html>
