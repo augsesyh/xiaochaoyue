@@ -1734,3 +1734,7 @@ G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.dll
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.dll
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.xml
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.xml
+C:\Users\吴思琪\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csprojAssemblyReference.cache
+C:\Users\吴思琪\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csproj.CoreCompileInputs.cache
+C:\Users\吴思琪\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.dll
+C:\Users\吴思琪\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.pdb

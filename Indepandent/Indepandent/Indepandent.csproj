@@ -192,12 +192,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\developerController.cs" />
     <Compile Include="Controllers\frumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\_commentsController.cs" />
+    <Compile Include="Models\IRepository\IAdminRepository.cs" />
     <Compile Include="Models\IRepository\IBlockRespotory.cs" />
     <Compile Include="Models\IRepository\IGame_deRepository.cs" />
+    <Compile Include="Models\Repository\AdminRepository.cs" />
     <Compile Include="Models\Repository\BlockRespository.cs" />
     <Compile Include="Models\Repository\Game_deRepository.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -424,6 +428,8 @@
     <Folder Include="Scripts\syh\" />
     <Folder Include="Scripts\wsq\" />
     <Folder Include="Scripts\zgj\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\_comments\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
