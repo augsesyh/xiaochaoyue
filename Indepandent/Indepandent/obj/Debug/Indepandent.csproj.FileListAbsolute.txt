@@ -1730,3 +1730,7 @@ G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.dll
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.xml
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.xml
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csprojAssemblyReference.cache
+G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.dll
+G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.dll
+G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.xml
+G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.xml
