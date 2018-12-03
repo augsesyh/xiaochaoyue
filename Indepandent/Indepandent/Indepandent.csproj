@@ -196,17 +196,6 @@
     <Compile Include="Controllers\frumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
-    <Compile Include="Models\IRepository\IBlockRespotory.cs" />
-    <Compile Include="Models\IRepository\IGame_deRepository.cs" />
-    <Compile Include="Models\Repository\BlockRespository.cs" />
-    <Compile Include="Models\Repository\Game_deRepository.cs" />
-    <Compile Include="Controllers\StoreController.cs" />
-    <Compile Include="Models\Repository\UserRepository.cs" />
-    <Compile Include="Controllers\qwjcode\ValidateCode.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\IRepository\IUserRepository.cs" />
     <Compile Include="Models\admin.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -220,6 +209,9 @@
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\categorys.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ca_ga.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\collections.cs">
@@ -243,6 +235,8 @@
     <Compile Include="Models\game_detail.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\IRepository\IBlockRespotory.cs" />
+    <Compile Include="Models\IRepository\IGame_deRepository.cs" />
     <Compile Include="Models\new.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -273,6 +267,15 @@
     <Compile Include="Models\reply.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Repository\BlockRespository.cs" />
+    <Compile Include="Models\Repository\Game_deRepository.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Models\Repository\UserRepository.cs" />
+    <Compile Include="Controllers\qwjcode\ValidateCode.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IRepository\IUserRepository.cs" />
     <Compile Include="Models\shoppingcart.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -280,6 +283,9 @@
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\user1.cs">
@@ -360,6 +366,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <EntityDeploy Include="Models\Project.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Project.Designer.cs</LastGenOutput>
@@ -367,11 +378,6 @@
     <Content Include="Models\Project.edmx.diagram">
       <DependentUpon>Project.edmx</DependentUpon>
     </Content>
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -409,6 +415,7 @@
     <Content Include="Views\Index\Index2.cshtml" />
     <Content Include="Views\developer\deve_Index.cshtml" />
     <Content Include="Views\developer\deve_login.cshtml" />
+    <Content Include="Views\frum\Block.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

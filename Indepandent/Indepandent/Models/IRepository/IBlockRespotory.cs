@@ -8,6 +8,7 @@ namespace Indepandent.Models.IRepository
 {
     interface IBlockRespotory
     {
-        IQueryable<Block> FindAll();
+        IQueryable<Block> FindAll(string ca);
+       
     }
 }

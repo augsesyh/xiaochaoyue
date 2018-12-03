@@ -30,6 +30,7 @@ namespace Indepandent.Models
         public virtual DbSet<admin> admin { get; set; }
         public virtual DbSet<ban> ban { get; set; }
         public virtual DbSet<Block> Block { get; set; }
+        public virtual DbSet<ca_ga> ca_ga { get; set; }
         public virtual DbSet<Card> Card { get; set; }
         public virtual DbSet<categorys> categorys { get; set; }
         public virtual DbSet<collections> collections { get; set; }
@@ -45,6 +46,7 @@ namespace Indepandent.Models
         public virtual DbSet<Rcard> Rcard { get; set; }
         public virtual DbSet<reply> reply { get; set; }
         public virtual DbSet<shoppingcart> shoppingcart { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<userinfo> userinfo { get; set; }
         public virtual DbSet<user1> user1 { get; set; }
     

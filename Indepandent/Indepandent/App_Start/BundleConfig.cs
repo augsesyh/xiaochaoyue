@@ -34,6 +34,8 @@ namespace Indepandent
                        "~/Content/syh/Index_Index.css"));
             bundles.Add(new StyleBundle("~/Content/syhstyle1").Include(
                         "~/Content/syh/frum_Index.css"));
+            bundles.Add(new StyleBundle("~/Content/PagedList").Include(
+                        "~/Content/PagedList.css"));
             bundles.Add(new StyleBundle("~/Content/zgjstyle").Include(
                       "~/Content/zgj/deve_login.css"));
         }
