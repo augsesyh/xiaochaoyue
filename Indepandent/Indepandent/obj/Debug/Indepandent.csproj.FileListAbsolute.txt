@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\augse\source\repos\Indepandent\Indepandent\bin\ApplicationInsights.config
 C:\Users\augse\source\repos\Indepandent\Indepandent\bin\Indepandent.dll.config
 C:\Users\augse\source\repos\Indepandent\Indepandent\bin\Indepandent.dll
@@ -1945,7 +1944,6 @@ E:\Indepandent\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csproj.
 E:\Indepandent\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csproj.CopyComplete
 E:\Indepandent\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.dll
 E:\Indepandent\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.pdb
-=======
 F:\Indepandent\xiaochaoyue\Indepandent\Indepandent\obj\Debug\Indepandent.csprojAssemblyReference.cache
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.dll
 G:\C#code\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.dll
@@ -1956,4 +1954,3 @@ G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.dll
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.dll
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.xml
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.xml
->>>>>>> df045e8d60dc5f7746c4e007f2ea2ff7603ff1e3
