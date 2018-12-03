@@ -29,6 +29,8 @@ namespace Indepandent.Models
         public int userid { get; set; }
         public System.DateTime Cardtime { get; set; }
         public int Rcardnum { get; set; }
+        public int priority { get; set; }
+        public string Card_comm { get; set; }
     
         public virtual Block Block { get; set; }
         public virtual userinfo userinfo { get; set; }

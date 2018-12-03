@@ -47,13 +47,15 @@
     </Key>
     <Property Name="CardID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Theme" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="Card_img" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Card_img" Type="varchar" MaxLength="500" />
     <Property Name="Card_cate" Type="char" MaxLength="20" Nullable="false" />
-    <Property Name="Video" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Video" Type="varchar" MaxLength="500" />
     <Property Name="BlockID" Type="int" Nullable="false" />
     <Property Name="userid" Type="int" Nullable="false" />
     <Property Name="Cardtime" Type="datetime" Nullable="false" />
     <Property Name="Rcardnum" Type="int" Nullable="false" />
+    <Property Name="priority" Type="int" Nullable="false" />
+    <Property Name="Card_comm" Type="varchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="categorys">
     <Key>

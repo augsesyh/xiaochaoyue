@@ -57,9 +57,9 @@
     </Key>
     <Property Name="CardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Theme" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Card_img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Card_cate" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="BlockID" Type="Int32" Nullable="false" />
     <Property Name="userid" Type="Int32" Nullable="false" />
     <Property Name="Cardtime" Type="DateTime" Nullable="false" Precision="3" />
@@ -67,6 +67,8 @@
     <NavigationProperty Name="Block" Relationship="Self.FK__Card__BlockID__76969D2E" FromRole="Card" ToRole="Block" />
     <NavigationProperty Name="userinfo" Relationship="Self.FK__Card__userid__778AC167" FromRole="Card" ToRole="userinfo" />
     <NavigationProperty Name="Rcard" Relationship="Self.FK__Rcard__CardID__2EDAF651" FromRole="Card" ToRole="Rcard" />
+    <Property Name="priority" Type="Int32" Nullable="false" />
+    <Property Name="Card_comm" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="categorys">
     <Key>

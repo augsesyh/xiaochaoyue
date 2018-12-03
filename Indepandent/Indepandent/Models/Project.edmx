@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="admin">
           <Key>
             <PropertyRef Name="adminid" />
@@ -52,13 +52,15 @@
           </Key>
           <Property Name="CardID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Theme" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="Card_img" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Card_img" Type="varchar" MaxLength="500" />
           <Property Name="Card_cate" Type="char" MaxLength="20" Nullable="false" />
-          <Property Name="Video" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Video" Type="varchar" MaxLength="500" />
           <Property Name="BlockID" Type="int" Nullable="false" />
           <Property Name="userid" Type="int" Nullable="false" />
           <Property Name="Cardtime" Type="datetime" Nullable="false" />
           <Property Name="Rcardnum" Type="int" Nullable="false" />
+          <Property Name="priority" Type="int" Nullable="false" />
+          <Property Name="Card_comm" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="categorys">
           <Key>
@@ -807,8 +809,7 @@
             <End Role="new" EntitySet="new" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -869,9 +870,9 @@
           </Key>
           <Property Name="CardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Theme" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Card_img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Card_img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Card_cate" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="BlockID" Type="Int32" Nullable="false" />
           <Property Name="userid" Type="Int32" Nullable="false" />
           <Property Name="Cardtime" Type="DateTime" Nullable="false" Precision="3" />
@@ -879,6 +880,8 @@
           <NavigationProperty Name="Block" Relationship="Self.FK__Card__BlockID__76969D2E" FromRole="Card" ToRole="Block" />
           <NavigationProperty Name="userinfo" Relationship="Self.FK__Card__userid__778AC167" FromRole="Card" ToRole="userinfo" />
           <NavigationProperty Name="Rcard" Relationship="Self.FK__Rcard__CardID__2EDAF651" FromRole="Card" ToRole="Rcard" />
+          <Property Name="priority" Type="Int32" Nullable="false" />
+          <Property Name="Card_comm" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="categorys">
           <Key>
@@ -1728,6 +1731,8 @@
           <EntitySetMapping Name="Card">
             <EntityTypeMapping TypeName="ProjectModel.Card">
               <MappingFragment StoreEntitySet="Card">
+                <ScalarProperty Name="Card_comm" ColumnName="Card_comm" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
                 <ScalarProperty Name="CardID" ColumnName="CardID" />
                 <ScalarProperty Name="Theme" ColumnName="Theme" />
                 <ScalarProperty Name="Card_img" ColumnName="Card_img" />

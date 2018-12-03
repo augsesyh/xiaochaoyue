@@ -37,5 +37,6 @@ namespace Indepandent.Controllers
             IPagedList<Block> pagedList = dt.ToPagedList(pageNumber, pageSize);
             return View(pagedList);
         }
+        []
     }
 }

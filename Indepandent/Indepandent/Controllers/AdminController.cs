@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Indepandent.Models;
+using Indepandent.Models.IRepository;
+using Indepandent.Models.Repository;
 
 namespace Indepandent.Controllers
 {
