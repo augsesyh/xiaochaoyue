@@ -1,0 +1,170 @@
+[33mcommit 12d1a86cb9cc03ef964ed5bd809a657434e0e400[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Mon Dec 3 09:01:33 2018 +0800
+
+    游戏板块
+
+[33mcommit 42de5d7044b7b326fcffd21ac479abd709415080[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Mon Dec 3 08:52:31 2018 +0800
+
+    游戏板块
+
+[33mcommit e05f62d4b898e6cb68c0d554a5c0aa4b2f0998fa[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Mon Dec 3 08:43:43 2018 +0800
+
+    游戏板块
+
+[33mcommit 07476d60897d849841bc02dc31155d1711078b66[m
+Merge: 8e24bbe f20a71a
+Author: augsesyh <2786250969@qq.com>
+Date:   Sun Dec 2 18:36:23 2018 +0800
+
+    da
+
+[33mcommit 8e24bbe5b635b907ab8442618810382b6ff81cd6[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Sun Dec 2 18:33:04 2018 +0800
+
+    论坛分页
+
+[33mcommit f20a71a18db516a6326883907e3ce9f03f40d480[m
+Author: zifans <903953451@qq.com>
+Date:   Sun Dec 2 18:31:21 2018 +0800
+
+    创建register方法
+
+[33mcommit 02f4811aa737b6ea25592d414e38917d4364bdbf[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Sun Dec 2 18:09:01 2018 +0800
+
+    项目提交
+
+[33mcommit 6a3e57d4b6e9bbababbbb0efdc05a28d45cdb392[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Sun Dec 2 18:03:30 2018 +0800
+
+    删除干净
+
+[33mcommit df71d7ef8db5f95d356ae39ce74a6f7249634887[m
+Author: 永辉 施 <2786250969@qq.com>
+Date:   Sun Dec 2 17:44:39 2018 +0800
+
+    删除我的项目
+
+[33mcommit 332b825b162b0b4562f2443dab09889ab5512fee[m
+Author: 永辉 施 <2786250969@qq.com>
+Date:   Sun Dec 2 17:41:13 2018 +0800
+
+    删除我的项目
+
+[33mcommit 988afcbefb2b24255d6534441e427da60ec77fe7[m
+Author: 永辉 施 <2786250969@qq.com>
+Date:   Sun Dec 2 16:33:08 2018 +0800
+
+    论坛首页
+
+[33mcommit 86536153b2073909aa59f96897844af8b00416e7[m
+Merge: c303355 f487adb
+Author: 永辉 施 <2786250969@qq.com>
+Date:   Sun Dec 2 15:24:51 2018 +0800
+
+    重新来
+
+[33mcommit c30335505c7895d89f4a127d745cda7ee6546e57[m
+Author: 永辉 施 <2786250969@qq.com>
+Date:   Sun Dec 2 14:23:39 2018 +0800
+
+    论坛首页搞定
+
+[33mcommit c4167534a7f1733f5131572dec7b4938b5e2091c[m
+Author: 永辉 施 <2786250969@qq.com>
+Date:   Sun Dec 2 14:03:17 2018 +0800
+
+    论坛首页搞定
+
+[33mcommit f487adb3e1341f9e0fb844d0d6b96479f8fee77d[m
+Merge: e313aff b2c8858
+Author: zifans <903953451@qq.com>
+Date:   Sat Dec 1 21:34:54 2018 +0800
+
+    开发者的登录注册
+
+[33mcommit e313aff778f6a1fbca2ce2ba92a91318dcb7ac8a[m
+Author: zifans <903953451@qq.com>
+Date:   Sat Dec 1 21:26:01 2018 +0800
+
+    开发者的登录注册
+
+[33mcommit b2c88581658c69d9232310593d55ec498939a596[m
+Author: unknown <2786250969@qq.com>
+Date:   Sat Dec 1 00:23:18 2018 +0800
+
+    验证码修改成功
+
+[33mcommit fdcb1cb223b69a96929333820e6528ab96b351ae[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Wed Nov 28 12:08:51 2018 +0800
+
+    完善首页，但验证码不能刷新
+
+[33mcommit 449110ef97458746bce8807a7a1b4dee0c8ce4ea[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Wed Nov 28 08:23:56 2018 +0800
+
+    修正验证码
+
+[33mcommit ba062bc65ce52a78c6fde03dd785e40fc66e6213[m
+Author: zifans <903953451@qq.com>
+Date:   Wed Nov 28 08:13:36 2018 +0800
+
+    图片路径的更改
+
+[33mcommit 748517abfd053c09dec1a83be41f4161696d3872[m
+Author: zifans <903953451@qq.com>
+Date:   Tue Nov 27 20:41:07 2018 +0800
+
+    创建developer控制器
+
+[33mcommit 6e9df65cf7605d985e018136a6e10b7f3104bdd7[m
+Author: zifans <903953451@qq.com>
+Date:   Tue Nov 27 18:49:23 2018 +0800
+
+    创建store下的detail方法（测试）。
+
+[33mcommit 868d73490171cd6ae7de6e61793dd18949173c73[m
+Author: ZIFANS <zhanggongjing0216@163.com>
+Date:   Tue Nov 27 17:30:51 2018 +0800
+
+    Delete zgj.cpp
+
+[33mcommit d6acfb2cc742b4d9d5cfd89df8abbc950bfeae88[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Tue Nov 27 14:46:17 2018 +0800
+
+    不晓得是啥
+
+[33mcommit 57bf5f0785b4c0be405cad2dfdb33d186297ac69[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Tue Nov 27 14:44:22 2018 +0800
+
+    不晓得是啥
+
+[33mcommit 3a53dd6900f903e4d7b407cdc076c579bf25a6fc[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Tue Nov 27 14:25:38 2018 +0800
+
+    项目第二次提交
+
+[33mcommit b3851aceb7201c947bdf47adcfbe0c00d0234a7d[m
+Author: augsesyh <2786250969@qq.com>
+Date:   Tue Nov 27 14:20:38 2018 +0800
+
+    项目第二次提交
+
+[33mcommit 4b903ca510be7069f8c493bd9ff9944a6fd1bc5b[m
+Author: 施永辉 <2786250969@qq.com>
+Date:   Tue Nov 27 13:59:43 2018 +0800
+
+    项目提交
