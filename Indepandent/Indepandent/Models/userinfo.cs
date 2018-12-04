@@ -60,7 +60,6 @@ namespace Indepandent.Models
         [Required(ErrorMessage = "不能为空")]
         [Display(Name = "验证码")]
         public string valicode { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ban> ban { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

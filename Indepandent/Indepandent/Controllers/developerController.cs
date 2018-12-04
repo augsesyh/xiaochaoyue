@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Indepandent.Models;
+using System.IO;
 
 namespace Indepandent.Controllers
 {
@@ -40,6 +41,37 @@ namespace Indepandent.Controllers
         [HttpGet]
         public ActionResult deve_register()
         {
+            return View();
+        }
+
+        public ActionResult upload()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult SavaAs(HttpPostedFileBase MyFileimg, HttpPostedFileBase MyFilevideo)
+        {
+            var strLocalFullpathName = MyFileimg.FileName;
+            var strFileName = Path.GetFileName(strLocalFullpathName);
+            var strServerFilePath = Server.MapPath("/developer_upload/deve_upload_images");
+            MyFileimg.SaveAs(Path.Combine(strServerFilePath, strFileName));
+
+
+            //var strLocalFullpathName1 = MyFilevideo.FileName;
+            //var strFileName1 = Path.GetFileName(strLocalFullpathName);
+            //var strServerFilePath1 = Server.MapPath("/developer_upload/deve_upload_videos");
+            //MyFilevideo.SaveAs(Path.Combine(strServerFilePath, strFileName));
+
+
+            ViewBag.strLocalFullpathName = strLocalFullpathName;
+            ViewBag.strFileName = strFileName;
+            ViewBag.strServerFilePath = strServerFilePath;
+
+            //ViewBag.strLocalFullpathName1 = strLocalFullpathName1;
+            //ViewBag.strFileName1 = strFileName1;
+            //ViewBag.strServerFilePath1 = strServerFilePath1;
             return View();
         }
 

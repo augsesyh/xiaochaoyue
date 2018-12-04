@@ -24,9 +24,9 @@
         <EntityTypeShape EntityType="ProjectModel.Rcard" Width="1.5" PointX="13.5" PointY="21.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel.reply" Width="1.5" PointX="8.25" PointY="26.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel.shoppingcart" Width="1.5" PointX="14.25" PointY="25.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.sysdiagrams" Width="1.5" PointX="2.875" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel.userinfo" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.user1" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.user1" Width="1.5" PointX="5.625" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ProjectModel.FK__ban__admin_id__3D5E1FD2" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__feedback__admin___2E1BDC42" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__game_deta__admin__52593CB8" ManuallyRouted="false" />

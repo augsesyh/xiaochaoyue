@@ -54,6 +54,7 @@
     <Property Name="userid" Type="int" Nullable="false" />
     <Property Name="Cardtime" Type="datetime" Nullable="false" />
     <Property Name="Rcardnum" Type="int" Nullable="false" />
+    <Property Name="priority" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="categorys">
     <Key>

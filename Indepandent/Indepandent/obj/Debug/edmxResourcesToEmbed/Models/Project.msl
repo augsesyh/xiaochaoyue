@@ -49,6 +49,7 @@
     <EntitySetMapping Name="Card">
       <EntityTypeMapping TypeName="ProjectModel.Card">
         <MappingFragment StoreEntitySet="Card">
+          <ScalarProperty Name="priority" ColumnName="priority" />
           <ScalarProperty Name="CardID" ColumnName="CardID" />
           <ScalarProperty Name="Theme" ColumnName="Theme" />
           <ScalarProperty Name="Card_img" ColumnName="Card_img" />

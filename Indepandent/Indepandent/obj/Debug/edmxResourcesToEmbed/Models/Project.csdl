@@ -67,6 +67,7 @@
     <NavigationProperty Name="Block" Relationship="Self.FK__Card__BlockID__76969D2E" FromRole="Card" ToRole="Block" />
     <NavigationProperty Name="userinfo" Relationship="Self.FK__Card__userid__778AC167" FromRole="Card" ToRole="userinfo" />
     <NavigationProperty Name="Rcard" Relationship="Self.FK__Rcard__CardID__2EDAF651" FromRole="Card" ToRole="Rcard" />
+    <Property Name="priority" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="categorys">
     <Key>

@@ -1954,3 +1954,7 @@ G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.dll
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.dll
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.xml
 G:\c#code\augsesyh\xiaochaoyue\Indepandent\Indepandent\bin\PagedList.Mvc.xml
+C:\Users\施永辉\Desktop\Indepandent\Indepandent\bin\PagedList.dll
+C:\Users\施永辉\Desktop\Indepandent\Indepandent\bin\PagedList.Mvc.dll
+C:\Users\施永辉\Desktop\Indepandent\Indepandent\bin\PagedList.xml
+C:\Users\施永辉\Desktop\Indepandent\Indepandent\bin\PagedList.Mvc.xml

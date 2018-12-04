@@ -11,7 +11,7 @@ using PagedList;
 
 namespace Indepandent.Controllers
 {
-    public class frumController : Controller
+    public class FrumController : Controller
     {
         ProjectEntities db = new ProjectEntities();
         // GET: frum
@@ -35,6 +35,16 @@ namespace Indepandent.Controllers
             int pageNumber = page ?? 1; 
             int pageSize = int.Parse(ConfigurationManager.AppSettings["pageSize"]); 
             IPagedList<Block> pagedList = dt.ToPagedList(pageNumber, pageSize);
+            return View(pagedList);
+        }
+        [HttpGet]
+        public ActionResult Card(int ?page,int id)
+        {
+            ICardRespository dt = new CardRespository();
+            var dc = dt.FindAll(id);
+            int pageNumber = page ?? 1;
+            int pageSize = int.Parse(ConfigurationManager.AppSettings["pageSize"]);
+            IPagedList<Card> pagedList = dc.ToPagedList(pageNumber, pageSize);
             return View(pagedList);
         }
     }

@@ -25,8 +25,14 @@ namespace Indepandent.Controllers
             var dt = da.FindTop();
             return PartialView(dt);
         }
-       
-        
+       public ActionResult Login()
+        {
+            return PartialView();
+        }
+        public ActionResult Register()
+        {
+            return PartialView();
+        }
         [AllowAnonymous]
         public ActionResult GetValidateCode()
         {
