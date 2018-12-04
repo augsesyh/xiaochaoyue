@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Indepandent.Models.developer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DevelpoerPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Developertelephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperRealName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperIntro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeveloperName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DevelpoerPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeveloperEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Developertelephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeveloperImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeveloperRealName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeveloperIntro)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DeveloperID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeveloperID })
+        </td>
+    </tr>
+}
+
+</table>
