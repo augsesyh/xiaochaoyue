@@ -22,10 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-.Splitter {
-    min-height: 52px;
-}
-.bg {
-    background: url("../img/背景.jpg") no-repeat center;
-    background-size: contain;
-}
