@@ -114,11 +114,7 @@ namespace Indepandent.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        /// <summary>
-        /// sdfsdfdsfsdfsd
-        /// </summary>
-        /// <returns></returns>
-        [HttpPost]
+
         public ActionResult login()
         {
             return View();
