@@ -114,7 +114,8 @@ namespace Indepandent.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        //总感觉中国经济国家
+        [HttpPost]
         public ActionResult login()
         {
             return View();
