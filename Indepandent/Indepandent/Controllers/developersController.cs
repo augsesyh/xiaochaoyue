@@ -114,7 +114,8 @@ namespace Indepandent.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        //sdfdf
+        //shiyonghui
+        [HttpGet]
         public ActionResult login()
         {
             return View();
