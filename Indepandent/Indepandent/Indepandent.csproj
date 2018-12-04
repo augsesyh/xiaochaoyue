@@ -46,10 +46,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -148,9 +156,94 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\developersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\admin.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ban.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Block.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Card.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\categorys.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\collections.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\comment.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\developer.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\download.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\feedback.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\game.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\game_detail.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\new.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\orders.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\order_detail.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rcard.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\reply.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\shoppingcart.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user1.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\userinfo.cs">
+      <DependentUpon>Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,10 +256,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Project.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Project.Context.cs</LastGenOutput>
+      <DependentUpon>Project.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Project.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Project.edmx</DependentUpon>
+      <LastGenOutput>Project.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\Project.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Project.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Project.edmx.diagram">
+      <DependentUpon>Project.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -193,10 +303,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\developers\Create.cshtml" />
+    <Content Include="Views\developers\Delete.cshtml" />
+    <Content Include="Views\developers\Details.cshtml" />
+    <Content Include="Views\developers\Edit.cshtml" />
+    <Content Include="Views\developers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -210,6 +324,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
