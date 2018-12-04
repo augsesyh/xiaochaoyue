@@ -37,9 +37,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ca_ga">
+      <EntityTypeMapping TypeName="ProjectModel.ca_ga">
+        <MappingFragment StoreEntitySet="ca_ga">
+          <ScalarProperty Name="ca_ga_id" ColumnName="ca_ga_id" />
+          <ScalarProperty Name="ca_id" ColumnName="ca_id" />
+          <ScalarProperty Name="ga_id" ColumnName="ga_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Card">
       <EntityTypeMapping TypeName="ProjectModel.Card">
         <MappingFragment StoreEntitySet="Card">
+          <ScalarProperty Name="priority" ColumnName="priority" />
           <ScalarProperty Name="CardID" ColumnName="CardID" />
           <ScalarProperty Name="Theme" ColumnName="Theme" />
           <ScalarProperty Name="Card_img" ColumnName="Card_img" />
@@ -124,7 +134,6 @@
           <ScalarProperty Name="gameid" ColumnName="gameid" />
           <ScalarProperty Name="game_developer_id" ColumnName="game_developer_id" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
-          <ScalarProperty Name="category_id" ColumnName="category_id" />
           <ScalarProperty Name="game_name" ColumnName="game_name" />
           <ScalarProperty Name="game_link" ColumnName="game_link" />
           <ScalarProperty Name="game_code" ColumnName="game_code" />

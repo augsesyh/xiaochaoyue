@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="admin">
           <Key>
             <PropertyRef Name="adminid" />
@@ -38,6 +38,14 @@
           <Property Name="Block_in" Type="varchar" MaxLength="200" />
           <Property Name="gameid" Type="int" />
         </EntityType>
+        <EntityType Name="ca_ga">
+          <Key>
+            <PropertyRef Name="ca_ga_id" />
+          </Key>
+          <Property Name="ca_ga_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ca_id" Type="int" />
+          <Property Name="ga_id" Type="int" />
+        </EntityType>
         <EntityType Name="Card">
           <Key>
             <PropertyRef Name="CardID" />
@@ -51,6 +59,7 @@
           <Property Name="userid" Type="int" Nullable="false" />
           <Property Name="Cardtime" Type="datetime" Nullable="false" />
           <Property Name="Rcardnum" Type="int" Nullable="false" />
+          <Property Name="priority" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="categorys">
           <Key>
@@ -119,7 +128,6 @@
           <Property Name="gameid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="game_developer_id" Type="int" Nullable="false" />
           <Property Name="user_id" Type="int" />
-          <Property Name="category_id" Type="int" />
           <Property Name="game_name" Type="varchar" MaxLength="50" />
           <Property Name="game_link" Type="varchar" MaxLength="500" />
           <Property Name="game_code" Type="varchar" MaxLength="500" />
@@ -275,6 +283,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__ca_ga__ca_id__1B9317B3">
+          <End Role="categorys" Type="Self.categorys" Multiplicity="0..1" />
+          <End Role="ca_ga" Type="Self.ca_ga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorys">
+              <PropertyRef Name="categoryid" />
+            </Principal>
+            <Dependent Role="ca_ga">
+              <PropertyRef Name="ca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ca_ga__ga_id__1C873BEC">
+          <End Role="game" Type="Self.game" Multiplicity="0..1" />
+          <End Role="ca_ga" Type="Self.ca_ga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="game">
+              <PropertyRef Name="gameid" />
+            </Principal>
+            <Dependent Role="ca_ga">
+              <PropertyRef Name="ga_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Card__BlockID__76969D2E">
           <End Role="Block" Type="Self.Block" Multiplicity="1" />
           <End Role="Card" Type="Self.Card" Multiplicity="*" />
@@ -404,18 +436,6 @@
             </Principal>
             <Dependent Role="feedback">
               <PropertyRef Name="user_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__game__category_i__267ABA7A">
-          <End Role="categorys" Type="Self.categorys" Multiplicity="0..1" />
-          <End Role="game" Type="Self.game" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="categorys">
-              <PropertyRef Name="categoryid" />
-            </Principal>
-            <Dependent Role="game">
-              <PropertyRef Name="category_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -634,6 +654,7 @@
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ban" EntityType="Self.ban" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Block" EntityType="Self.Block" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ca_ga" EntityType="Self.ca_ga" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="categorys" EntityType="Self.categorys" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="collections" EntityType="Self.collections" Schema="dbo" store:Type="Tables" />
@@ -673,6 +694,14 @@
           <AssociationSet Name="FK__Block__gameid__7D439ABD" Association="Self.FK__Block__gameid__7D439ABD">
             <End Role="game" EntitySet="game" />
             <End Role="Block" EntitySet="Block" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ca_ga__ca_id__1B9317B3" Association="Self.FK__ca_ga__ca_id__1B9317B3">
+            <End Role="categorys" EntitySet="categorys" />
+            <End Role="ca_ga" EntitySet="ca_ga" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ca_ga__ga_id__1C873BEC" Association="Self.FK__ca_ga__ga_id__1C873BEC">
+            <End Role="game" EntitySet="game" />
+            <End Role="ca_ga" EntitySet="ca_ga" />
           </AssociationSet>
           <AssociationSet Name="FK__Card__BlockID__76969D2E" Association="Self.FK__Card__BlockID__76969D2E">
             <End Role="Block" EntitySet="Block" />
@@ -717,10 +746,6 @@
           <AssociationSet Name="FK__feedback__user_i__2D27B809" Association="Self.FK__feedback__user_i__2D27B809">
             <End Role="userinfo" EntitySet="userinfo" />
             <End Role="feedback" EntitySet="feedback" />
-          </AssociationSet>
-          <AssociationSet Name="FK__game__category_i__267ABA7A" Association="Self.FK__game__category_i__267ABA7A">
-            <End Role="categorys" EntitySet="categorys" />
-            <End Role="game" EntitySet="game" />
           </AssociationSet>
           <AssociationSet Name="FK__game__game_devel__24927208" Association="Self.FK__game__game_devel__24927208">
             <End Role="developer" EntitySet="developer" />
@@ -783,8 +808,7 @@
             <End Role="new" EntitySet="new" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -829,6 +853,16 @@
           <NavigationProperty Name="Card" Relationship="Self.FK__Card__BlockID__76969D2E" FromRole="Block" ToRole="Card" />
           <NavigationProperty Name="Rcard" Relationship="Self.FK__Rcard__BlockID__75A278F5" FromRole="Block" ToRole="Rcard" />
         </EntityType>
+        <EntityType Name="ca_ga">
+          <Key>
+            <PropertyRef Name="ca_ga_id" />
+          </Key>
+          <Property Name="ca_ga_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ca_id" Type="Int32" />
+          <Property Name="ga_id" Type="Int32" />
+          <NavigationProperty Name="categorys" Relationship="Self.FK__ca_ga__ca_id__1B9317B3" FromRole="ca_ga" ToRole="categorys" />
+          <NavigationProperty Name="game" Relationship="Self.FK__ca_ga__ga_id__1C873BEC" FromRole="ca_ga" ToRole="game" />
+        </EntityType>
         <EntityType Name="Card">
           <Key>
             <PropertyRef Name="CardID" />
@@ -845,6 +879,7 @@
           <NavigationProperty Name="Block" Relationship="Self.FK__Card__BlockID__76969D2E" FromRole="Card" ToRole="Block" />
           <NavigationProperty Name="userinfo" Relationship="Self.FK__Card__userid__778AC167" FromRole="Card" ToRole="userinfo" />
           <NavigationProperty Name="Rcard" Relationship="Self.FK__Rcard__CardID__2EDAF651" FromRole="Card" ToRole="Rcard" />
+          <Property Name="priority" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="categorys">
           <Key>
@@ -852,7 +887,7 @@
           </Key>
           <Property Name="categoryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="game" Relationship="Self.FK__game__category_i__267ABA7A" FromRole="categorys" ToRole="game" />
+          <NavigationProperty Name="ca_ga" Relationship="Self.FK__ca_ga__ca_id__1B9317B3" FromRole="categorys" ToRole="ca_ga" />
         </EntityType>
         <EntityType Name="collections">
           <Key>
@@ -926,14 +961,13 @@
           <Property Name="gameid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="game_developer_id" Type="Int32" Nullable="false" />
           <Property Name="user_id" Type="Int32" />
-          <Property Name="category_id" Type="Int32" />
           <Property Name="game_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="game_link" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="game_code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="game_price" Type="Double" />
           <Property Name="game_download_num" Type="Int32" />
           <NavigationProperty Name="Block" Relationship="Self.FK__Block__gameid__7D439ABD" FromRole="game" ToRole="Block" />
-          <NavigationProperty Name="categorys" Relationship="Self.FK__game__category_i__267ABA7A" FromRole="game" ToRole="categorys" />
+          <NavigationProperty Name="ca_ga" Relationship="Self.FK__ca_ga__ga_id__1C873BEC" FromRole="game" ToRole="ca_ga" />
           <NavigationProperty Name="collections" Relationship="Self.FK__collectio__game___4E88ABD4" FromRole="game" ToRole="collections" />
           <NavigationProperty Name="comment" Relationship="Self.FK__comment__game_id__45F365D3" FromRole="game" ToRole="comment" />
           <NavigationProperty Name="developer" Relationship="Self.FK__game__game_devel__24927208" FromRole="game" ToRole="developer" />
@@ -1164,6 +1198,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__ca_ga__ca_id__1B9317B3">
+          <End Role="categorys" Type="Self.categorys" Multiplicity="0..1" />
+          <End Role="ca_ga" Type="Self.ca_ga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorys">
+              <PropertyRef Name="categoryid" />
+            </Principal>
+            <Dependent Role="ca_ga">
+              <PropertyRef Name="ca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ca_ga__ga_id__1C873BEC">
+          <End Role="game" Type="Self.game" Multiplicity="0..1" />
+          <End Role="ca_ga" Type="Self.ca_ga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="game">
+              <PropertyRef Name="gameid" />
+            </Principal>
+            <Dependent Role="ca_ga">
+              <PropertyRef Name="ga_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Card__userid__778AC167">
           <End Role="userinfo" Type="Self.userinfo" Multiplicity="1" />
           <End Role="Card" Type="Self.Card" Multiplicity="*" />
@@ -1185,18 +1243,6 @@
             </Principal>
             <Dependent Role="Rcard">
               <PropertyRef Name="CardID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__game__category_i__267ABA7A">
-          <End Role="categorys" Type="Self.categorys" Multiplicity="0..1" />
-          <End Role="game" Type="Self.game" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="categorys">
-              <PropertyRef Name="categoryid" />
-            </Principal>
-            <Dependent Role="game">
-              <PropertyRef Name="category_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1444,6 +1490,7 @@
           <EntitySet Name="admin" EntityType="Self.admin" />
           <EntitySet Name="ban" EntityType="Self.ban" />
           <EntitySet Name="Block" EntityType="Self.Block" />
+          <EntitySet Name="ca_ga" EntityType="Self.ca_ga" />
           <EntitySet Name="Card" EntityType="Self.Card" />
           <EntitySet Name="categorys" EntityType="Self.categorys" />
           <EntitySet Name="collections" EntityType="Self.collections" />
@@ -1490,6 +1537,14 @@
             <End Role="Block" EntitySet="Block" />
             <End Role="Rcard" EntitySet="Rcard" />
           </AssociationSet>
+          <AssociationSet Name="FK__ca_ga__ca_id__1B9317B3" Association="Self.FK__ca_ga__ca_id__1B9317B3">
+            <End Role="categorys" EntitySet="categorys" />
+            <End Role="ca_ga" EntitySet="ca_ga" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ca_ga__ga_id__1C873BEC" Association="Self.FK__ca_ga__ga_id__1C873BEC">
+            <End Role="game" EntitySet="game" />
+            <End Role="ca_ga" EntitySet="ca_ga" />
+          </AssociationSet>
           <AssociationSet Name="FK__Card__userid__778AC167" Association="Self.FK__Card__userid__778AC167">
             <End Role="userinfo" EntitySet="userinfo" />
             <End Role="Card" EntitySet="Card" />
@@ -1497,10 +1552,6 @@
           <AssociationSet Name="FK__Rcard__CardID__2EDAF651" Association="Self.FK__Rcard__CardID__2EDAF651">
             <End Role="Card" EntitySet="Card" />
             <End Role="Rcard" EntitySet="Rcard" />
-          </AssociationSet>
-          <AssociationSet Name="FK__game__category_i__267ABA7A" Association="Self.FK__game__category_i__267ABA7A">
-            <End Role="categorys" EntitySet="categorys" />
-            <End Role="game" EntitySet="game" />
           </AssociationSet>
           <AssociationSet Name="FK__collectio__game___4E88ABD4" Association="Self.FK__collectio__game___4E88ABD4">
             <End Role="game" EntitySet="game" />
@@ -1666,9 +1717,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ca_ga">
+            <EntityTypeMapping TypeName="ProjectModel.ca_ga">
+              <MappingFragment StoreEntitySet="ca_ga">
+                <ScalarProperty Name="ca_ga_id" ColumnName="ca_ga_id" />
+                <ScalarProperty Name="ca_id" ColumnName="ca_id" />
+                <ScalarProperty Name="ga_id" ColumnName="ga_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Card">
             <EntityTypeMapping TypeName="ProjectModel.Card">
               <MappingFragment StoreEntitySet="Card">
+                <ScalarProperty Name="priority" ColumnName="priority" />
                 <ScalarProperty Name="CardID" ColumnName="CardID" />
                 <ScalarProperty Name="Theme" ColumnName="Theme" />
                 <ScalarProperty Name="Card_img" ColumnName="Card_img" />
@@ -1753,7 +1814,6 @@
                 <ScalarProperty Name="gameid" ColumnName="gameid" />
                 <ScalarProperty Name="game_developer_id" ColumnName="game_developer_id" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
-                <ScalarProperty Name="category_id" ColumnName="category_id" />
                 <ScalarProperty Name="game_name" ColumnName="game_name" />
                 <ScalarProperty Name="game_link" ColumnName="game_link" />
                 <ScalarProperty Name="game_code" ColumnName="game_code" />

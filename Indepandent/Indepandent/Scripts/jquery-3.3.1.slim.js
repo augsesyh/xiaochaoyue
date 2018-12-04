@@ -113,7 +113,7 @@ var isWindow = function isWindow( obj ) {
 
 
 function toType( obj ) {
-	if ( obj == null ) {
+    if (obj == null) {// eslint-disable-line
 		return obj + "";
 	}
 
@@ -162,7 +162,7 @@ jQuery.fn = jQuery.prototype = {
 	get: function( num ) {
 
 		// Return all the elements in a clean array
-		if ( num == null ) {
+        if (num == null) {// eslint-disable-line
 			return slice.call( this );
 		}
 
@@ -368,7 +368,7 @@ jQuery.extend( {
 
 	// Support: Android <=4.0 only
 	trim: function( text ) {
-		return text == null ?
+        return text == null ?// eslint-disable-line
 			"" :
 			( text + "" ).replace( rtrim, "" );
 	},
@@ -377,7 +377,7 @@ jQuery.extend( {
 	makeArray: function( arr, results ) {
 		var ret = results || [];
 
-		if ( arr != null ) {
+        if (arr != null) {// eslint-disable-line
 			if ( isArrayLike( Object( arr ) ) ) {
 				jQuery.merge( ret,
 					typeof arr === "string" ?
@@ -452,7 +452,8 @@ jQuery.extend( {
 			for ( i in elems ) {
 				value = callback( elems[ i ], i, arg );
 
-				if ( value != null ) {
+                if (value != null) {
+                   
 					ret.push( value );
 				}
 			}

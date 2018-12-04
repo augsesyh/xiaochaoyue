@@ -1,0 +1,33 @@
+﻿@model PagedList.IPagedList<Indepandent.Models.Block>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Block";
+}
+@Styles.Render("~/Content/PagedList")
+<div class="game text-danger">
+    <div class="game-header">
+        <span class="fa fa-home"><a href="@Url.Action("Index","Frum")" class="head">首页</a></span>>><span class="fa fa-gamepad"><a class="head" href="@Url.Action("Block","Frum")">游戏</a></span>
+    </div>
+    <div class="game-body">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 game-base">
+                        <a href="@Url.Action("Card","Frum",new { id=item.BlockID,name=item.Blockname})"><h4 style="text-align:left;">@Html.DisplayFor(modelitem=>item.Blockname)</h4></a>
+                        <hr class="style-two" />
+                        <p>@Html.DisplayFor(modelitem => item.Block_in)</p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="game-footer text-center">
+        @Html.PagedListPager(Model, page => Url.Action("Block","Frum",new { page }))
+    </div>
+</div >
+@section Scripts{
+@Styles.Render("~/Content/syhstyle1");
+    }

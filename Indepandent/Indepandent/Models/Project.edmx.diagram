@@ -4,28 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e38b840cabb646e2a0e8ff900202ee4e" Name="Diagram1">
-        <EntityTypeShape EntityType="ProjectModel.admin" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.ban" Width="1.5" PointX="3" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.Block" Width="1.5" PointX="11.25" PointY="18.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.Card" Width="1.5" PointX="6" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.categorys" Width="1.5" PointX="6.75" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.collections" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.comment" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.developer" Width="1.5" PointX="6.75" PointY="28.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.download" Width="1.5" PointX="6" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.feedback" Width="1.5" PointX="6" PointY="24.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.game" Width="1.5" PointX="9" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.game_detail" Width="1.5" PointX="14.25" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.new" Width="1.5" PointX="11.25" PointY="25.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.order_detail" Width="1.5" PointX="11.25" PointY="32.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.orders" Width="1.5" PointX="3" PointY="46.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.Rcard" Width="1.5" PointX="13.5" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.reply" Width="1.5" PointX="8.25" PointY="25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.shoppingcart" Width="1.5" PointX="11.25" PointY="22.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.userinfo" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel.user1" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="49e02733063c4de5bc093514e3efc95d" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectModel.admin" Width="1.5" PointX="0.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.ban" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Block" Width="1.5" PointX="11.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.ca_ga" Width="1.5" PointX="11.25" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Card" Width="1.5" PointX="6" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.categorys" Width="1.5" PointX="9" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.collections" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.comment" Width="1.5" PointX="3" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.developer" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.download" Width="1.5" PointX="6" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.feedback" Width="1.5" PointX="6" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.game" Width="1.5" PointX="9" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.game_detail" Width="1.5" PointX="14.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.new" Width="1.5" PointX="11.25" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.order_detail" Width="1.5" PointX="11.25" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.orders" Width="1.5" PointX="3" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Rcard" Width="1.5" PointX="13.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.reply" Width="1.5" PointX="8.25" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.shoppingcart" Width="1.5" PointX="14.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.sysdiagrams" Width="1.5" PointX="2.875" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.userinfo" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.user1" Width="1.5" PointX="5.625" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ProjectModel.FK__ban__admin_id__3D5E1FD2" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__feedback__admin___2E1BDC42" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__game_deta__admin__52593CB8" ManuallyRouted="false" />
@@ -33,9 +34,10 @@
         <AssociationConnector Association="ProjectModel.FK__Block__gameid__7D439ABD" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__Card__BlockID__76969D2E" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__Rcard__BlockID__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__ca_ga__ca_id__1B9317B3" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__ca_ga__ga_id__1C873BEC" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__Card__userid__778AC167" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__Rcard__CardID__2EDAF651" ManuallyRouted="false" />
-        <AssociationConnector Association="ProjectModel.FK__game__category_i__267ABA7A" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__collectio__game___4E88ABD4" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__collectio__user___4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__comment__downloa__46E78A0C" ManuallyRouted="false" />

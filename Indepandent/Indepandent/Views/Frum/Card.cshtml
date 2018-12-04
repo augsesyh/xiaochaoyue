@@ -1,0 +1,50 @@
+﻿@model PagedList.IPagedList<Indepandent.Models.Card>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Card";
+}
+<div>
+    <div class="card-head">
+        <span class="fa fa-home"><a href="@Url.Action("Index","Frum")" class="head">首页</a></span>>><span class="fa fa-gamepad"><a class="head" href="@Url.Action("Block","Frum")">游戏</a></span>>><span class="fa fa-caret-down"><a class="head" href="@Url.Action("Card","Frum",new { id=@ViewData["id"],name=@ViewData["name"]})">@ViewData["name"]</a></span>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <p>标题</p>
+                </div>
+                <div class="col-md-2">
+                    <p>作者</p>
+                </div>
+                <div class="col-md-1">
+                    <p>回复</p>
+                </div>
+                <div class="col-md-1">
+                    <p>查看</p>
+                </div>
+                <div class="col-md-3">
+                    <p>最后发表</p>
+                </div>
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-5">
+                        <p>标题</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>作者</p>
+                    </div>
+                    <div class="col-md-1">
+                        <p>回复</p>
+                    </div>
+                    <div class="col-md-1">
+                        <p>查看</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>最后发表</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<h2>Card</h2>

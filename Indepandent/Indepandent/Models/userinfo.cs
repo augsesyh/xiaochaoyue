@@ -11,7 +11,8 @@ namespace Indepandent.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class userinfo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,17 +30,36 @@ namespace Indepandent.Models
             this.reply = new HashSet<reply>();
             this.shoppingcart = new HashSet<shoppingcart>();
         }
-    
+
         public int userid { get; set; }
+        [Required(ErrorMessage = "不能为空")]
+        [Display(Name = "用户名")]
         public string username { get; set; }
+        [Required(ErrorMessage = "不能为空")]
+        [StringLength(20, ErrorMessage = "密码不能超过20个字符")]
+        [Display(Name = "密码")]
         public string userpassword { get; set; }
+        [Required(ErrorMessage = "不能为空")]
+        [Display(Name = "确认密码")]
+        [Compare("userpassword")]
+        public string confirmpassword { get; set; }
+
         public string userimg { get; set; }
+        [Required(ErrorMessage = "不能为空")]
+        [Display(Name = "真实姓名")]
         public string userrealname { get; set; }
+        [Required(ErrorMessage = "不能为空")]
+        [EmailAddress]
+        [Display(Name = "邮箱")]
         public string useremail { get; set; }
+        [Required(ErrorMessage = "不能为空")]
+        [Display(Name = "电话")]
         public string usertelephone { get; set; }
         public string usercondition { get; set; }
         public string userintro { get; set; }
-    
+        [Required(ErrorMessage = "不能为空")]
+        [Display(Name = "验证码")]
+        public string valicode { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ban> ban { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

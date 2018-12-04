@@ -1,4 +1,4 @@
-﻿using System.Web;
+using System.Web;
 using System.Web.Optimization;
 
 namespace Indepandent
@@ -9,7 +9,8 @@ namespace Indepandent
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery.unobtrusive-ajax.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -24,7 +25,20 @@ namespace Indepandent
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/font-awesome.css"));
+            bundles.Add(new StyleBundle("~/bundles/show").Include(
+                      "~/Scripts/show.js"));
+            bundles.Add(new StyleBundle("~/bundles/StoreStart").Include(
+                       "~/Scripts/StoreStart.js"));
+            bundles.Add(new StyleBundle("~/Content/syhstyle").Include(
+                       "~/Content/syh/Index_Index.css"));
+            bundles.Add(new StyleBundle("~/Content/syhstyle1").Include(
+                        "~/Content/syh/frum_Index.css"));
+            bundles.Add(new StyleBundle("~/Content/PagedList").Include(
+                        "~/Content/PagedList.css"));
+            bundles.Add(new StyleBundle("~/Content/zgjstyle").Include(
+                    "~/Content/zgj/deve_Index.css",
+                    "~/Content/zgj/deve_login.css"));
         }
     }
 }

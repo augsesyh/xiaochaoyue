@@ -44,12 +44,6 @@ namespace Indepandent.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public ActionResult deve_register()
-        //{
-        //    return View();
-        //}
-
         public ActionResult upload()
         {
             return View();
