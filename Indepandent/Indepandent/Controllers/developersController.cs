@@ -115,6 +115,11 @@ namespace Indepandent.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult login()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
