@@ -3,12 +3,14 @@
 @{
     ViewBag.Title = "Card";
 }
-<div>
+<div class="col-md-8 col-md-offset-1 all_Card">
     <div class="card-head">
         <span class="fa fa-home"><a href="@Url.Action("Index","Frum")" class="head">首页</a></span>>><span class="fa fa-gamepad"><a class="head" href="@Url.Action("Block","Frum")">游戏</a></span>>><span class="fa fa-caret-down"><a class="head" href="@Url.Action("Card","Frum",new { id=@ViewData["id"],name=@ViewData["name"]})">@ViewData["name"]</a></span>
     </div>
     <div class="card-body">
         <div class="container">
+            <div class="logo">@ViewData["name"]</div>
+            <div class="add_card"><button >发帖</button></div><div></div>
             <div class="row">
                 <div class="col-md-5">
                     <p>标题</p>
@@ -19,32 +21,39 @@
                 <div class="col-md-1">
                     <p>回复</p>
                 </div>
-                <div class="col-md-1">
-                    <p>查看</p>
-                </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-3">
-                    <p>最后发表</p>
+                    <p class="text-right">最后发表</p>
                 </div>
                 @foreach (var item in Model)
                 {
                     <div class="col-md-5">
-                        <p>标题</p>
+                        <span class="fa fa-bookmark"></span><a href="#">@item.Theme</a>
                     </div>
                     <div class="col-md-2">
-                        <p>作者</p>
+                        <p >@item.userinfo.username</p>
                     </div>
                     <div class="col-md-1">
-                        <p>回复</p>
+                        <span class="fa fa-comment"></span><p>@item.Rcardnum</p>
                     </div>
                     <div class="col-md-1">
-                        <p>查看</p>
+                        @if (item.Rcard.OrderBy(c => c.Rcardtime).FirstOrDefault() == null)
+                        {<p class="text-center">@item.userinfo.username</p> }
+                    else
+                    {<p class="text-center"> @item.Rcard.OrderBy(c => c.Rcardtime).FirstOrDefault().userinfo.username </p>}
                     </div>
                     <div class="col-md-3">
-                        <p>最后发表</p>
+                        @if (item.Rcard.OrderBy(c => c.Rcardtime).FirstOrDefault() == null)
+                        {<p class="text-right">@item.Cardtime</p> }
+                    else
+                    {<p class="text-right"> @item.Rcard.OrderBy(c => c.Rcardtime).FirstOrDefault().Rcardtime</p>}
                     </div>
                 }
             </div>
+       
         </div>
+
     </div>
+
 </div>
-<h2>Card</h2>
+@Styles.Render("~/Content/syhstyle2")
