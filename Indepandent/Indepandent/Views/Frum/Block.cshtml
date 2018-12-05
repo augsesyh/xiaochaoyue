@@ -25,7 +25,8 @@
         </div>
     </div>
     <div class="game-footer text-center">
-        @Html.PagedListPager(Model, page => Url.Action("Block","Frum",new { page }))
+        @if (Model.PageCount > 1)
+        {@Html.PagedListPager(Model, page => Url.Action("Block", "Frum", new { page }))}
     </div>
 </div >
 @section Scripts{

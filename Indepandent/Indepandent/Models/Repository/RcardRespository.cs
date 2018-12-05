@@ -5,12 +5,12 @@ using System.Web;
 using Indepandent.Models.IRepository;
 namespace Indepandent.Models.Repository
 {
-    public class CardRespository:ICardRespository
+    public class RcardRespository:IRcardRespository
     {
         ProjectEntities db = new ProjectEntities();
-        IQueryable<Card> ICardRespository.FindAll(int Blockid)
+        Rcard IRcardRespository.GetRcard(int Blockid)
         {
-            var da = db.Card.Where(o => o.BlockID == Blockid).OrderBy(b=>b.priority);
+            var da = db.Rcard.Where(o => o.BlockID == Blockid).OrderBy(c => c.Rcardtime).FirstOrDefault();
             return da;
         }
     }

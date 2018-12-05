@@ -40,14 +40,20 @@ namespace Indepandent.Controllers
         [HttpGet]
         public ActionResult Card(int ?page,int id)
         {
-            ICardRespository dt = new CardRespository();
+
+            ICardRespository da = new CardRespository();
             ViewData["id"] = id;
             ViewData["name"] = Request.QueryString["name"];
-            var dc = dt.FindAll(id);
+            var dc = da.FindAll(id);             
             int pageNumber = page ?? 1;
             int pageSize = int.Parse(ConfigurationManager.AppSettings["pageSize"]);
             IPagedList<Card> pagedList = dc.ToPagedList(pageNumber, pageSize);
             return View(pagedList);
+        }
+        [HttpGet]
+        public ActionResult Rcard(int id)
+        {
+            return View();
         }
     }
 }

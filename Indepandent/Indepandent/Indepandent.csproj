@@ -241,6 +241,7 @@
     <Compile Include="Models\IRepository\IBlockRespotory.cs" />
     <Compile Include="Models\IRepository\ICardRespository.cs" />
     <Compile Include="Models\IRepository\IGame_deRepository.cs" />
+    <Compile Include="Models\IRepository\IRcardRespository.cs" />
     <Compile Include="Models\new.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -276,6 +277,7 @@
     <Compile Include="Models\Repository\CardRespository.cs" />
     <Compile Include="Models\Repository\Game_deRepository.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Models\Repository\RcardRespository.cs" />
     <Compile Include="Models\Repository\UserRepository.cs" />
     <Compile Include="Controllers\qwjcode\ValidateCode.cs" />
     <Compile Include="Global.asax.cs">
@@ -310,6 +312,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\syh\Frum_Card.css" />
     <Content Include="Content\syh\frum_Index.css" />
     <Content Include="Content\syh\Index_Index.css" />
     <Content Include="Content\zgj\deve_Index.css" />
